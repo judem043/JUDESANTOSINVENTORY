@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUDESANTOS</title>
+    <style>
+        body {
+            font-family: 'Helvetica';
+            font-size: 2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://wallpapercave.com/wp/wp2763910.gif');
+			background-attachment: fixed;
+ 			background-size: cover;
+        }
+
+        #container {
+            background-color: #ffffff9d; 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: inset 0vw 0vw 0vw .1vw #22d4bc, 0vw 0vw 1.5vw 0vw #1bbcc2, 0vw 0vw 1.5vw 0vw #15b2c7;
+        }
+
+        input {
+            height: 50px;
+            width: 300px;
+            font-size: 1.2em;
+        }
+
+        table, th, td {
+            width: 500px;
+            border: 1px solid black;
+            border-collapse: collapse;
+			box-shadow: inset 0vw 0vw 0vw .1vw #22d4bc, 0vw 0vw 1.5vw 0vw #1bbcc2, 0vw 0vw 1.5vw 0vw #15b2c7;
+        }
+
+		h2 {
+			animation: glow 1s ease-in-out infinite alternate;
+		}
+
+		th {
+			animation: glow 1s ease-in-out infinite alternate;
+		}
+		p {
+			animation: glow 1s ease-in-out infinite alternate;
+		}
+
+
+        @-webkit-keyframes glow {
+        from {
+             text-shadow: 0 0 10px rgb(15, 130, 138), 0 0 20px rgb(13, 113, 116), 0 0 30px #04fafa, 0 0 40px #04fafa, 0 0 50px #04fafa, 0 0 60px #04fafa, 0 0 70px #04fafa;
+        }
+  
+        to  {
+            text-shadow: 0 0 20px rgb(255, 5, 222), 0 0 30px #6104f7, 0 0 40px #b62396, 0 0 50px #b62396, 0 0 60px #b62396, 0 0 70px #b62396, 0 0 80px #b62396;
+        }
+        
+       }
+    </style>
+</head>
+<body>
+<div id="container">
+    <h2>Inventory System</h2>
+    <form action="#" id="inputForm">
+        <p id="usersList"></p>
+        <p>Item: <input type="text" id="item"></p>
+        <p>Quantity: <input type="number" id="quantity"></p>
+        <input type="submit" value="Submit" id="submitButton">
+    </form>
+    <div class="setVisibility">
+        <p>View table (Check the box)<input type="checkbox" id="checkbox" style="margin:auto;"></p>
+    </div>
+    <div class="tablesSection" style="margin-top: 10px; display: none;">
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+            </tr>
+        </table>
+    </div>
+    <form id="editForm" style="display: none;">
+        <input type="text" id="newText"/>
+        <input type="submit">
+    </form>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
